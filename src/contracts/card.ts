@@ -1,5 +1,5 @@
 export interface Card {
-  id: string;
+  id: number;
   tipo: string;
   categoria: string;
   descricao: string;
@@ -7,4 +7,3 @@ export interface Card {
   coracoes: number;
   bonus: boolean;
 }
-
