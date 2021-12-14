@@ -1,30 +1,32 @@
-import { Component, OnInit } from '@angular/core';
-import { CdkDragDrop, moveItemInArray,transferArrayItem} from '@angular/cdk/drag-drop';
-import { Card } from './card';
+import { Component } from '@angular/core';
+import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
+import { Card } from '../contracts/card';
 import { Router } from '@angular/router';
-import { cards } from './cards';
+import { shuffle } from "../utils/shuffle";
+import { cards } from '../providers/card';
 import { HttpClient } from '@angular/common/http';
-
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent{
+export class AppComponent {
+  public cards: Card[];
+
+  public table: string[];
+  public hand: string[] = [];
+
   constructor(private router: Router, private httpClient: HttpClient) {
-    this.card = {} as Card;
+    this.cards = cards;
+    this.table = this.getCards();
   }
 
-  cards: any =[];
+  private getCards(): string[] {
+    return shuffle(cards.map(card => card.descricao));
+  }
 
-  card: Card;
-
-  mesa = ['Carta 1', 'Carta 2', 'Carta 3', 'Carta 4', 'Carta 5', 'Carta 6'];
-
-  mao = ['Get up', 'Brush teeth', 'Take a shower', 'Check e-mail', 'Walk dog'];
-
-  drop(event: CdkDragDrop<string[]>) {
+  drop(event: CdkDragDrop<string[]>): void {
     if (event.previousContainer === event.container) {
       moveItemInArray(
         event.container.data,
@@ -39,6 +41,9 @@ export class AppComponent{
         event.currentIndex
       );
     }
-  }  
+  }
 
+  randomize(): void {
+    this.table = this.getCards().filter((card) => this.hand.includes(card) === false);
+  }
 }

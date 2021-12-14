@@ -1,7 +1,5 @@
-import { defaultRippleAnimationConfig } from '@angular/material/core';
-
 export interface Card {
-  id: string;
+  id: number;
   tipo: string;
   categoria: string;
   descricao: string;
@@ -9,4 +7,3 @@ export interface Card {
   coracoes: number;
   bonus: boolean;
 }
-
