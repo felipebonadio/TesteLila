@@ -1,5 +1,3 @@
-import { defaultRippleAnimationConfig } from '@angular/material/core';
-
 export interface Card {
   id: string;
   tipo: string;
