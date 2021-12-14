@@ -17,10 +17,10 @@
     <div class="row">
       <div
         cdkDropList
-        [cdkDropListData]="done"
+        [cdkDropListData]="mao"
         class="cartas"
         (cdkDropListDropped)="drop($event)">
-        <div class="border column example-box" *ngFor="let item of done" cdkDrag>
+        <div class="border column example-box" *ngFor="let item of mao" cdkDrag>
           {{ item }}
         </div>
       </div>
