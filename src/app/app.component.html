@@ -12,9 +12,12 @@
           <div class="linhas"> 
            <p> Tipo: {{ card[0] }}</p><br>
            <p> Descrição: {{ card[1] }}</p><br>
-           <p> Pontos: {{ card[2] }}</p><br>
-           <p> Corações: {{ card[3] }}</p><br>   
-           <p> Bonus: {{ card[4] }}</p><br>                    
+           <p> Pontos: {{ card[2] }}</p><br>           
+            <div class="colunas">
+             <mat-icon *ngFor="let i of [].constructor(card[3])">favorite</mat-icon> 
+             <mat-icon style="font-size: 40px" *ngFor="let i of [].constructor(card[4])">favorite</mat-icon>                         
+            </div>
+            <p> Bonus: {{ card[5] }}</p><br>                    
           </div>         
         </div>
       </div>

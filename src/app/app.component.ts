@@ -23,7 +23,7 @@ export class AppComponent {
   }
 
   private getCards(): string[] {
-    return shuffle(cards.map(card => [card.tipo, card.descricao, card.pontos, card.coracoes, card.bonus]));  
+    return shuffle(cards.map(card => [card.tipo, card.descricao, card.pontos, card.coracoesPeq, card.coracoesGr, card.bonus]));  
   }
 
   drop(event: CdkDragDrop<string[]>): void {
@@ -46,4 +46,5 @@ export class AppComponent {
   randomize(): void {
     this.table = this.getCards().filter((card) => this.hand.includes(card) === false);
   }
+  
 }

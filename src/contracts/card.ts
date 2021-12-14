@@ -4,6 +4,7 @@ export interface Card {
   categoria: string;
   descricao: string;
   pontos: number;
-  coracoes: number;
+  coracoesPeq: number;
+  coracoesGr: number;
   bonus: boolean;
 }

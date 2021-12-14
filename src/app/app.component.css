@@ -80,3 +80,9 @@
   display: grid;
   grid-template-rows: auto auto auto auto auto auto;
 }
+
+.colunas{
+  display: grid;
+  grid-template-columns: 10% 10% 10%;
+  color: red;
+}
