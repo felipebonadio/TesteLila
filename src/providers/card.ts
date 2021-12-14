@@ -57,8 +57,8 @@ export const cards: Card[] = [
     categoria: "genérica",
     descricao: "Deficiência é o termo usado para definir a ausência ou a disfunção de uma estrutura psíquica, fisiológica ou anatômica.",
     pontos: 1,
-    coracoesPeq: 2,
-    coracoesGr:0,
+    coracoesPeq: 0,
+    coracoesGr:2,
     bonus: false,
   }
 ];

@@ -76,13 +76,32 @@
   clear: both;
 }
 
-.linhas{
+.linhas {
   display: grid;
   grid-template-rows: auto auto auto auto auto auto;
 }
 
-.colunas{
+.colunas {
   display: grid;
-  grid-template-columns: 10% 10% 10%;
-  color: red;
+  grid-template-columns: 15% 15% 15%;
+  height:55px;
+  grid-gap: 5px;
+  color: red;   
+  align-items: baseline;
+  justify-content: start;
+}
+
+#grande {
+  font-size: 40px;
+  color: crimson;
+}
+
+mat-icon {
+  margin: 5px;
+}
+
+.coluna-2{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-around;
 }
