@@ -1,26 +1,23 @@
+<section>
+  <div class="example-button-row">
+    <button (click)="randomize()" mat-raised-button>Embaralhar</button>
+  </div>
+</section>
 <div class="container">
   <div cdkDropListGroup>
     <h2>Mesa</h2>
     <div class="row">
-      <div
-        cdkDropList
-        [cdkDropListData]="mesa"
-        class="cartas"
-        (cdkDropListDropped)="drop($event)">
-        <div class="border column example-box" *ngFor="let item of mesa" cdkDrag>
-          {{ item }}
+      <div cdkDropList [cdkDropListData]="table" class="cartas" (cdkDropListDropped)="drop($event)">
+        <div class="border column example-box" *ngFor="let card of table" cdkDrag>
+          {{ card }}
         </div>
       </div>
     </div>
 
     <h2>Mão</h2>
     <div class="row">
-      <div
-        cdkDropList
-        [cdkDropListData]="mao"
-        class="cartas"
-        (cdkDropListDropped)="drop($event)">
-        <div class="border column example-box" *ngFor="let item of mao" cdkDrag>
+      <div cdkDropList [cdkDropListData]="hand" class="cartas" (cdkDropListDropped)="drop($event)">
+        <div class="border column example-box" *ngFor="let item of hand" cdkDrag>
           {{ item }}
         </div>
       </div>
