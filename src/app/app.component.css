@@ -35,7 +35,7 @@
   background: white;
   font-size: 14px;
   width: auto;
-  height: 200px;
+  height: 350px;
 }
 
 .cdk-drag-preview {
@@ -74,4 +74,9 @@
   content: "";
   display: table;
   clear: both;
+}
+
+.linhas{
+  display: grid;
+  grid-template-rows: auto auto auto auto auto auto;
 }

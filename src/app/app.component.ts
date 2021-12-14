@@ -23,7 +23,7 @@ export class AppComponent {
   }
 
   private getCards(): string[] {
-    return shuffle(cards.map(card => card.descricao));
+    return shuffle(cards.map(card => [card.tipo, card.descricao, card.pontos, card.coracoes, card.bonus]));  
   }
 
   drop(event: CdkDragDrop<string[]>): void {
