@@ -3,7 +3,7 @@ import { Card } from "../contracts/card";
 export const cards: Card[] = [
   {
     id: 1,
-    tipo: "definicao",
+    tipo: "Definicao",
     categoria: "visual",
     descricao: "Deficiência visual abrange pessoas cegas e pessoas com visão reduzida.",
     pontos: 1,
@@ -13,7 +13,7 @@ export const cards: Card[] = [
   },
   {
     id: 2,
-    tipo: "informacao",
+    tipo: "Informacao",
     categoria: "auditiva",
     descricao: "O termo correto é 'Surdo' e não 'Surdo-mudo'. A mudez é uma outra deficiência.",
     pontos: 1,
@@ -23,7 +23,7 @@ export const cards: Card[] = [
   },
   {
     id: 3,
-    tipo: "pessoa",
+    tipo: "Pessoa",
     categoria: "física",
     descricao: "Jillian Mercado é uma modelo americana com distrofia muscular, que se interessou pelo mundo da moda devido à sua mãe, costureira, e seu pai, vendedor de calçados.",
     pontos: 1,
@@ -33,7 +33,7 @@ export const cards: Card[] = [
   },
   {
     id: 4,
-    tipo: "ação",
+    tipo: "Ação",
     categoria: "intelectual",
     descricao: "A pessoa com deficiência intelectual deve fazer sozinha tudo o que puder, e devemos ajudá-la somente se for necessário.",
     pontos: 2,
@@ -43,7 +43,7 @@ export const cards: Card[] = [
   },
   {
     id: 5,
-    tipo: "filme",
+    tipo: "Filme",
     categoria: "tea",
     descricao: "Temple Grandin (2010) - Baseado no livro “Uma menina estranha”, da própria Temple, uma mulher com autismo que se tornou uma das maiores especialistas do mundo em manejo de gado.",
     pontos: 1,
@@ -53,7 +53,16 @@ export const cards: Card[] = [
   },
   {
     id: 6,
-    tipo: "informação",
+    tipo: "Informação",
+    categoria: "genérica",
+    descricao: "Deficiência é o termo usado para definir a ausência ou a disfunção de uma estrutura psíquica, fisiológica ou anatômica.",
+    pontos: 1,
+    coracoesPeq: 0,
+    coracoesGr:2,
+    bonus: false,
+  },{
+    id: 7,
+    tipo: "Pessoa",
     categoria: "genérica",
     descricao: "Deficiência é o termo usado para definir a ausência ou a disfunção de uma estrutura psíquica, fisiológica ou anatômica.",
     pontos: 1,

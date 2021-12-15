@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
-import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
+import {
+  CdkDragDrop,
+  moveItemInArray,
+  transferArrayItem,
+} from '@angular/cdk/drag-drop';
 import { Card } from '../contracts/card';
 import { Router } from '@angular/router';
-import { shuffle } from "../utils/shuffle";
+import { shuffle } from '../utils/shuffle';
 import { cards } from '../providers/card';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -14,19 +17,25 @@ import { HttpClient } from '@angular/common/http';
 export class AppComponent {
   public cards: Card[];
 
-  public table: string[];
-  public hand: string[] = [];
+  public table: Card[];
+  public hand: Card[] = [];
 
-  constructor(private router: Router, private httpClient: HttpClient) {
-    this.cards = cards;
-    this.table = this.getCards();
+  constructor(private router: Router) {
+    this.cards = shuffle(cards);
+    this.table = [];
+    this.updateTable();
   }
 
-  private getCards(): string[] {
-    return shuffle(cards.map(card => [card.tipo, card.descricao, card.pontos, card.coracoesPeq, card.coracoesGr, card.bonus]));  
+  updateTable() {
+    for (let index = 0; index <= 5; index++) {
+      if(this.cards[index] == undefined){
+        break;
+      }
+      this.table[index] = this.cards[index];
+    }
   }
 
-  drop(event: CdkDragDrop<string[]>): void {
+  drop(event: CdkDragDrop<Card[]>): void {
     if (event.previousContainer === event.container) {
       moveItemInArray(
         event.container.data,
@@ -34,17 +43,27 @@ export class AppComponent {
         event.currentIndex
       );
     } else {
-      transferArrayItem(
-        event.previousContainer.data,
-        event.container.data,
-        event.previousIndex,
-        event.currentIndex
-      );
+      if (event.previousContainer.data === this.table) {
+        transferArrayItem(
+          event.previousContainer.data,
+          event.container.data,
+          event.previousIndex,
+          event.currentIndex
+        );
+        if (this.cards.length > 0) {
+          this.table.splice(event.previousIndex, 1);
+          this.cards.splice(event.previousIndex, 1);
+        }
+      }
+    }
+    if (cards.length > 0) {
+      this.updateTable();
     }
   }
 
   randomize(): void {
-    this.table = this.getCards().filter((card) => this.hand.includes(card) === false);
+    this.table = shuffle(
+      this.cards.filter((card) => this.hand.includes(card) === false)
+    );
   }
-  
 }
