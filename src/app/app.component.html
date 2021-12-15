@@ -11,8 +11,8 @@
         <div class="border column example-box" *ngFor="let card of table" cdkDrag>         
           <div class="linhas"> 
             <div class="coluna-2">
-           <p> {{ card[0] }}</p>
-           <p> {{ card[2] }}</p>   
+           <h2> {{ card[0] }}</h2>
+           <h2 class="points right"> {{ card[2] }}</h2>   
           </div>
            <p> {{ card[1] }}</p><br>                 
             <div class="colunas">
@@ -34,7 +34,7 @@
           <div class="linhas"> 
             <div class="coluna-2">
            <p> {{ card[0] }}</p>
-           <p> {{ card[2] }}</p>   
+           <p class="points"> {{ card[2] }}</p>   
           </div>
            <p> {{ card[1] }}</p><br>                 
             <div class="colunas">

@@ -112,3 +112,11 @@
   justify-self: end;
   margin: 10%
 }
+
+.points{
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  height: 45%;
+  width: 16%;
+}
