@@ -28,7 +28,7 @@ export class AppComponent {
 
   updateTable() {
     for (let index = 0; index <= 5; index++) {
-      if(this.cards[index] == undefined){
+      if (this.cards[index] == undefined) {
         break;
       }
       this.table[index] = this.cards[index];
@@ -51,7 +51,6 @@ export class AppComponent {
           event.currentIndex
         );
         if (this.cards.length > 0) {
-          this.table.splice(event.previousIndex, 1);
           this.cards.splice(event.previousIndex, 1);
         }
       }
@@ -59,11 +58,5 @@ export class AppComponent {
     if (cards.length > 0) {
       this.updateTable();
     }
-  }
-
-  randomize(): void {
-    this.table = shuffle(
-      this.cards.filter((card) => this.hand.includes(card) === false)
-    );
   }
 }
