@@ -84,7 +84,8 @@
 .colunas {
   display: grid;
   grid-template-columns: 15% 15% 15%;
-  height:55px;
+  height:auto;
+  width: auto;
   grid-gap: 5px;
   color: red;   
   align-items: baseline;
@@ -96,12 +97,18 @@
   color: crimson;
 }
 
-mat-icon {
-  margin: 5px;
-}
 
+.gift{
+  color: darkgoldenrod;
+  font-size: 50px;
+  
+}
 .coluna-2{
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: space-around;
+}
+.right{
+  justify-self: end;
+  margin: 10%
 }
