@@ -9,7 +9,8 @@ export const cards: Card[] = [
     pontos: 1,
     coracoesPeq: 1,
     coracoesGr: 1,
-    bonus: false,
+    bonus1: false,
+    bonus2: false
   },
   {
     id: 2,
@@ -19,7 +20,8 @@ export const cards: Card[] = [
     pontos: 1,
     coracoesPeq: 2,
     coracoesGr:0,
-    bonus: true,
+    bonus1: true,
+    bonus2: false
   },
   {
     id: 3,
@@ -29,7 +31,8 @@ export const cards: Card[] = [
     pontos: 1,
     coracoesPeq: 1,
     coracoesGr:0,
-    bonus: false,
+    bonus1: false,
+    bonus2: false
   },
   {
     id: 4,
@@ -39,7 +42,8 @@ export const cards: Card[] = [
     pontos: 2,
     coracoesPeq: 2,
     coracoesGr:1,
-    bonus: true,
+    bonus1: false,
+    bonus2: true
   },
   {
     id: 5,
@@ -49,7 +53,8 @@ export const cards: Card[] = [
     pontos: 1,
     coracoesPeq: 1,
     coracoesGr:0,
-    bonus: false,
+    bonus1: false,
+    bonus2: false
   },
   {
     id: 6,
@@ -59,7 +64,8 @@ export const cards: Card[] = [
     pontos: 1,
     coracoesPeq: 0,
     coracoesGr:2,
-    bonus: false,
+    bonus1: false,
+    bonus2: false
   },{
     id: 7,
     tipo: "Pessoa",
@@ -68,6 +74,17 @@ export const cards: Card[] = [
     pontos: 1,
     coracoesPeq: 0,
     coracoesGr:2,
-    bonus: false,
+    bonus1: false,
+    bonus2: false
+  },{
+    id: 8,
+    tipo: "Ação",
+    categoria: "visual",
+    descricao: "Nunca puxe a pessoa cega ou pegue o seu braço. Caso ela queira ser guiada, dê o seu ombro ou cotovelo dobrado para apoio.",
+    pontos: 3,
+    coracoesPeq: 1,
+    coracoesGr:2,
+    bonus1: false,
+    bonus2: true
   }
 ];

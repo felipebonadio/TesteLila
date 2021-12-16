@@ -6,5 +6,6 @@ export interface Card {
   pontos: number;
   coracoesPeq: number;
   coracoesGr: number;
-  bonus: boolean;
+  bonus1: boolean;
+  bonus2: boolean
 }

@@ -110,7 +110,12 @@
 }
 .right{
   justify-self: end;
-  margin: 10%
+  margin: 10%; 
+}
+
+.size{
+  width: 80%;
+  height: 80%;
 }
 
 .points{
