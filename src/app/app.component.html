@@ -25,6 +25,9 @@
       </div>
     </div>
 
+    <button (click)="diceNumber(1, 6)">gerar numero</button>
+    <h2 *ngIf="dice">{{dice}}</h2>
+    
     <h2>Mão</h2>
     <div class="row">
       <div cdkDropList [cdkDropListData]="hand" class="cartas" (cdkDropListDropped)="drop($event)">
@@ -44,7 +47,7 @@
             </div>
             <div *ngIf="card.bonus2" class="right">
               <img class="size" src="../assets/img/gift2.png" alt="">
-            </div>
+            </div> 
           </div>
         </div>
       </div>

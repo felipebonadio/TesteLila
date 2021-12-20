@@ -16,7 +16,7 @@ import { cards } from '../providers/card';
 })
 export class AppComponent {
   public cards: Card[];
-
+  public dice : number = 0;
   public table: Card[];
   public hand: Card[] = [];
 
@@ -58,5 +58,10 @@ export class AppComponent {
     if (cards.length > 0) {
       this.updateTable();
     }
+  }
+
+  diceNumber(min: number, max: number) {      
+    this.dice = Math.floor(Math.random() * (max - min + 1)) + min;  
+    return this.dice;
   }
 }
