@@ -15,7 +15,7 @@
               <mat-icon *ngFor="let i of [].constructor(card.coracoesPeq)">favorite</mat-icon>
             </div>
             <div *ngIf="card.bonus1" class="right">
-              <img class="size" src="../assets/img/gift.png" alt="">              
+              <img class="size" src="../assets/img/gift.png" alt="">
             </div>
             <div *ngIf="card.bonus2" class="right">
               <img class="size" src="../assets/img/gift2.png" alt="">
@@ -25,9 +25,9 @@
       </div>
     </div>
 
-    <button (click)="diceNumber(1, 6)">gerar numero</button>
+    <button (click)="diceNumber(1, 6)">Rolar o dado</button>
     <h2 *ngIf="dice">{{dice}}</h2>
-    
+
     <h2>Mão</h2>
     <div class="row">
       <div cdkDropList [cdkDropListData]="hand" class="cartas" (cdkDropListDropped)="drop($event)">
@@ -43,11 +43,11 @@
               <mat-icon *ngFor="let i of [].constructor(card.coracoesPeq)">favorite</mat-icon>
             </div>
             <div *ngIf="card.bonus1" class="right">
-              <img class="size" src="../assets/img/gift.png" alt="">              
+              <img class="size" src="../assets/img/gift.png" alt="">
             </div>
             <div *ngIf="card.bonus2" class="right">
               <img class="size" src="../assets/img/gift2.png" alt="">
-            </div> 
+            </div>
           </div>
         </div>
       </div>
